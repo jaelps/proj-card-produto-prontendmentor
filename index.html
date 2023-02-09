@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --Dark-cyan: hsl(158, 36%, 37%);
+      --Cream: hsl(30, 38%, 92%);
+      --Very-dark-blue: hsl(212, 21%, 14%);
+      --Dark-grayish-blue: hsl(228, 12%, 48%);
+      --White: hsl(0, 0%, 100%);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .fundo{
+      background-color: var(--Cream);
+      display: flex;
+      justify-content: center;
+    }
+
+    .box-superior{
+      display: flex;
+      flex-direction: column;
+      margin: 100px 0;
+    }
+
+    .box{
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .box-image{
+      display: flex;
+    }
+
+    .box-image > img{
+      display: flex;
+      width: 270px;
+      height: 380px;
+      border-radius: 10px 0 0 10px;
+      background-image: url(images/image-product-desktop.jpg);
+      background-repeat: no-repeat;
+      background-size: 300px;
+    }
+
+    .produto{
+      display: flex;
+      flex-direction: column;
+      padding: 35px;
+      background-color: white;
+      height: 310px;
+      width: 180px;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .titulo{
+      font-family: 'Montserrat';
+      font-weight: 500;
+      margin: 5px 0;
+      letter-spacing: 5px;
+      font-size: 12px;
+      color: rgba(63, 60, 60, 0.571);
+    }
+
+    .subtitulo{
+      font-family: 'Fraunces';
+      font-weight: 700;
+      width: 180px;
+      font-size: 28px;
+      margin: 12px 0;
+      line-height: 25px;
+
+    }
+
+    .descricao{
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: 12px;
+      width: 193px;
+      color: rgba(63, 60, 60, 0.571);
+      height: 100px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .oferta{
+      display: flex;
+      align-items: center;
+      height: 70px;
+    }
+
+    .oferta-desconto{
+      font-family: 'Fraunces';
+      font-weight: 700;
+      color: var(--Dark-cyan);
+      font-size: 25px;
+    }
+
+    .oferta-original{
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: 10px;
+      text-decoration: line-through;
+      margin: 0 0 0 10px;
+      color: rgba(63, 60, 60, 0.571);
+    }
+
+    button{
+      background-color: var(--Dark-cyan);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      width: 180px;
+      height: 35px;
+    }
+
+    @media screen and (min-width: 1440px){
+      .box-image > img{
+        background-image: url(images/image-product-desktop.jpg);
+      }
+    }
+
+    @media screen and (max-width: 375px){
+      .box{
+        flex-direction: column;
+      }
+      .box-image > img{
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: 350px;
+        height: 240px;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .produto{
+        border-radius: 0 0 10px 10px;
+        padding: 19px;
+        width: 231.5px;
+        height: 280px;
+        
+      }
+
+      .subtitulo{
+        width: 230px;
+        font-size: 25px;
+      }
+
+      .descricao{
+        width: 230px;
+        height: 70px;
+      }
+
+      .oferta-desconto{
+        margin: 0;
+      }
+
+      button{
+        width: 220px;
+      }
+    }
+  </style>
+</head>
+<body class="fundo">
+  <section class="box-superior">
+    <section class="box">
+      <picture class="box-image">
+        <img>
+      </picture>
+      <article class="produto">
+        <h1 class="titulo">PERFUME</h1>
+        <h2 class="subtitulo">Gabrielle Essence Eau De Parfum</h2>
+        <p class="descricao">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <article class="oferta">
+          <p class="oferta-desconto">$149.99</p>
+          <p class="oferta-original">$169.99</p>
+        </article>
+        <button>Add to Cart</button>
+      </article>
+    </section>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </section>
+</body>
+</html>
